@@ -1,4 +1,8 @@
 package org.iesalandalus.programacion.matriculacion;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 public class Alumno {
 
     //paso 1 crear la clase alumno
@@ -30,4 +34,26 @@ public class Alumno {
         }
         return nombreFormateado.toString().trim();
     }
+    //paso 4 crea el metodo comprobarLetraDNI
+    public boolean comprobarLetraDNI() {
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        String patron = "(\\d+)([A-Z])";
+        Pattern pattern = Pattern.compile(patron);
+
+        Matcher matcher = pattern.matcher(dni);
+
+        if (matcher.matches()) {
+            String numero = matcher.group(1);
+            char letra = matcher.group(2).charAt(0);
+
+            int num = Integer.parseInt(numero);
+            char letraCorrecta = letras.charAt(num % 23);
+
+            return letra == letraCorrecta;
+        }
+
+        return false;
+    }
+
+    //paso 5 crear metodos de acceso
 }
