@@ -18,5 +18,13 @@ public enum Curso {
         return this.ordinal() + ".-" + this.cadenaAMostrar;
     }
 
+    //paso 5 crea el metodo toString
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "cadenaAMostrar='" + cadenaAMostrar + '\'' +
+                '}';
+    }
 
 }
