@@ -1,4 +1,6 @@
 package org.iesalandalus.programacion.matriculacion;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.regex.Matcher;
@@ -56,4 +58,22 @@ public class Alumno {
     }
 
     //paso 5 crear metodos de acceso
+
+
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(LocalDate fechaNacimiento) throws ParseException {
+
+    // pendiente
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    private boolean esMayorDeEdad(Date fecha) {
+        Date hoy = new Date();
+        long diferenciaEnMillis = hoy.getTime() - fecha.getTime();
+        long edad = diferenciaEnMillis / (1000L * 60 * 60 * 24 * 365);
+        return edad >= MIN_EDAD_ALUMNADO;
+    }
 }
