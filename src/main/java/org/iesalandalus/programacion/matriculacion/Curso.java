@@ -2,7 +2,7 @@ package org.iesalandalus.programacion.matriculacion;
 
 public enum Curso {
     // paso 1 crear enumerado curso
-    PRIMERO, SEGUNDO;
+    PRIMERO ("primero"), SEGUNDO ("segundo");
 
     //paso 2 crear atributo cadenaAMostrar
     private String cadenaAMostrar;
