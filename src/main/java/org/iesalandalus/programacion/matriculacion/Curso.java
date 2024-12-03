@@ -13,5 +13,10 @@ public enum Curso {
         this.cadenaAMostrar = cadenaAMostrar;
     }
 
+    //paso 4 crea el metodo imprimir
+    public String imprimir() {
+        return this.ordinal() + ".-" + this.cadenaAMostrar;
+    }
+
 
 }
