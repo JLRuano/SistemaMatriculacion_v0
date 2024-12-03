@@ -7,5 +7,11 @@ public enum Curso {
     //paso 2 crear atributo cadenaAMostrar
     private String cadenaAMostrar;
 
+    //paso 3 crea el constructor
+
+    Curso(String cadenaAMostrar) {
+        this.cadenaAMostrar = cadenaAMostrar;
+    }
+
 
 }
