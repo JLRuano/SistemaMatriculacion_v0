@@ -6,9 +6,9 @@ import java.util.Objects;
 public class Asignatura {
 
     //paso 1 crea la clase con los atributos
-    public static int MAX_NUM_HORAS_ANUALES;
-    public static int MAX_NUM_HORAS_DESDOBLES;
-    private static String ER_CODIGO;
+    public static int MAX_NUM_HORAS_ANUALES = 300;
+    public static int MAX_NUM_HORAS_DESDOBLES = 6;
+    private static String ER_CODIGO = "^\\d{4}$";
     private String codigo;
     private String nombre;
     private int horasAnuales;
