@@ -21,7 +21,18 @@ public class Matricula {
 
     // paso 3 constructor
 
+public Matricula (int idMatricula, String cursoAcademico, LocalDate fechaMatriculacion) {
+    setIdMatricula(idMatricula);
+    setCursoAcademico(cursoAcademico);
+    setFechaMatriculacion(fechaMatriculacion);
+}
+
     //paso 4 constructor copia
+    public Matricula (Matricula matricula) {
+    this.idMatricula = matricula.idMatricula;
+    this.cursoAcademico = matricula.cursoAcademico;
+    this.fechaMatriculacion = matricula.fechaMatriculacion;
+    }
 
     //paso 2 metodos de acceso
 
